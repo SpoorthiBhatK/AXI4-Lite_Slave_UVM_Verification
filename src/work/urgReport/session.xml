@@ -1,0 +1,51 @@
+<session version="1.1" release="Q-2020.03-SP2-8" timestp="2026-09-18 10:53:00 GMT">
+  <info>
+    <attr name="datetime" value="Fri Sep 18 16:23:03 2026
+"/>
+    <attr name="command" value="urg -dir work/regression.vdb -report work/urgReport"/>
+    <attr name="top_instance" value="axi_top"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="140/142" />
+    <metric name="Cond" value="88/109" />
+    <metric name="Toggle" value="884/894" />
+    <metric name="FSM" value="7/10" />
+    <metric name="Branch" value="54/60" />
+    <metric name="Assert" value="7/7" />
+    <metric name="Group" value="100%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="axi_package::axi_subscriber::inp_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="7/7" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="34/37" />
+      <score name="Score" value="91.89" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="34/37" />
+      <score name="Score" value="91.89" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

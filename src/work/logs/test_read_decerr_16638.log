@@ -1,0 +1,232 @@
+Command: /fetools/work_area/frontend/Batch_11/spoorthibhat/uvm/projects/AXI_Slave_Verification/src/work/simv +UVM_TESTNAME=test_read_decerr +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=16638 -cm line+cond+fsm+tgl+branch+assert -cm_dir work/regression.vdb -cm_name test_read_decerr_16638 -l work/logs/test_read_decerr_16638.log +UVM_NO_RELNOTES
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Sep 18 14:55 2026
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+### TOP INITIAL START : time=0
+### AFTER CONFIG SET : time=0
+UVM_INFO @ 0: reporter [RNTST] Running test test_read_decerr...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------
+Name                            Type                        Size  Value
+-----------------------------------------------------------------------
+uvm_test_top                    test_read_decerr            -     @477 
+  env                           axi_env                     -     @491 
+    inp_agt                     axi_inp_agent               -     @500 
+      inp_drv                   axi_driver                  -     @1030
+        rd_prt                  uvm_seq_item_pull_port      -     @1056
+        rsp_port                uvm_analysis_port           -     @1047
+        seq_item_port           uvm_seq_item_pull_port      -     @1038
+      inp_mon                   axi_inp_monitor             -     @758 
+        inp_monitor_port_read   uvm_analysis_port           -     @775 
+        inp_monitor_port_write  uvm_analysis_port           -     @766 
+      rd_sqr                    axi_sequencer               -     @907 
+        rsp_export              uvm_analysis_export         -     @915 
+        seq_item_export         uvm_seq_item_pull_imp       -     @1021
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+      wr_sqr                    axi_sequencer               -     @784 
+        rsp_export              uvm_analysis_export         -     @792 
+        seq_item_export         uvm_seq_item_pull_imp       -     @898 
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+    op_agt                      axi_op_agent                -     @508 
+      op_mon                    axi_op_monitor              -     @1084
+        op_m_port_read          uvm_analysis_port           -     @1101
+        op_m_port_write         uvm_analysis_port           -     @1092
+    scb                         axi_scoreboard              -     @516 
+      ip_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @577 
+        analysis_export         uvm_analysis_imp            -     @621 
+        get_ap                  uvm_analysis_port           -     @612 
+        get_peek_export         uvm_get_peek_imp            -     @594 
+        put_ap                  uvm_analysis_port           -     @603 
+        put_export              uvm_put_imp                 -     @585 
+      ip_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @524 
+        analysis_export         uvm_analysis_imp            -     @568 
+        get_ap                  uvm_analysis_port           -     @559 
+        get_peek_export         uvm_get_peek_imp            -     @541 
+        put_ap                  uvm_analysis_port           -     @550 
+        put_export              uvm_put_imp                 -     @532 
+      op_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @683 
+        analysis_export         uvm_analysis_imp            -     @727 
+        get_ap                  uvm_analysis_port           -     @718 
+        get_peek_export         uvm_get_peek_imp            -     @700 
+        put_ap                  uvm_analysis_port           -     @709 
+        put_export              uvm_put_imp                 -     @691 
+      op_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @630 
+        analysis_export         uvm_analysis_imp            -     @674 
+        get_ap                  uvm_analysis_port           -     @665 
+        get_peek_export         uvm_get_peek_imp            -     @647 
+        put_ap                  uvm_analysis_port           -     @656 
+        put_export              uvm_put_imp                 -     @638 
+    sub                         axi_subscriber              -     @736 
+      analysis_imp              uvm_analysis_imp            -     @744 
+-----------------------------------------------------------------------
+
+UVM_INFO axi_driver.sv(30) @ 0: uvm_test_top.env.inp_agt.inp_drv [DRV] Sequence Body started
+UVM_INFO axi_driver.sv(163) @ 45: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=100 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 55: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=100 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 55: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=100 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 55: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=11 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 65: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=11 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 65: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 65: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=11
+UVM_INFO axi_scoreboard.sv(128) @ 65: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=100 Actual_ARADDR=100
+UVM_INFO axi_scoreboard.sv(133) @ 65: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 65: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=11 Actual_RRESP=11
+UVM_INFO axi_driver.sv(163) @ 75: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=100 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 85: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=100 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 85: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=100 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 85: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=11 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 95: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=11 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 95: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 95: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=11
+UVM_INFO axi_scoreboard.sv(128) @ 95: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=100 Actual_ARADDR=100
+UVM_INFO axi_scoreboard.sv(133) @ 95: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 95: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=11 Actual_RRESP=11
+UVM_INFO axi_driver.sv(163) @ 105: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=100 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 115: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=100 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 115: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=100 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 115: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=11 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 125: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=11 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 125: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 125: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=11
+UVM_INFO axi_scoreboard.sv(128) @ 125: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=100 Actual_ARADDR=100
+UVM_INFO axi_scoreboard.sv(133) @ 125: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 125: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=11 Actual_RRESP=11
+UVM_INFO axi_driver.sv(163) @ 155: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=100 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 165: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=100 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 165: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=100 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 165: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=11 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 175: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=11 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 175: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 175: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=11
+UVM_INFO axi_scoreboard.sv(128) @ 175: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=100 Actual_ARADDR=100
+UVM_INFO axi_scoreboard.sv(133) @ 175: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 175: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=11 Actual_RRESP=11
+UVM_INFO axi_driver.sv(163) @ 185: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=100 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 195: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=100 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 195: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=100 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 195: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=11 RDATA=0
+UVM_INFO /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_objection.svh(1274) @ 195: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO axi_subscriber.sv(163) @ 195: uvm_test_top.env.sub [sub] INPUT COVERAGE = 50.000000
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   49
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AXI_AR]    10
+[AXI_R]     9
+[DRV]     1
+[OP_AR]     5
+[OP_R]     4
+[RNTST]     1
+[SCB]    12
+[TEST_DONE]     1
+[UVMTOP]     1
+[sub]     5
+$finish called from file "/fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_root.svh", line 437.
+$finish at simulation time                  195
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 195 ns
+CPU Time:      0.580 seconds;       Data structure size:   0.5Mb
+Fri Sep 18 14:55:42 2026

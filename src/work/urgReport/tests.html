@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Tests</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Tests</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-center">
+<b>Total Coverage Summary</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>LINE</td><td nowrap width=65>COND</td><td nowrap width=65>TOGGLE</td><td nowrap width=65>FSM</td><td nowrap width=65>BRANCH</td><td nowrap width=65>ASSERT</td><td nowrap width=65>GROUP</td></tr><tr>
+<td class="s9 cl rt"> 91.17</td>
+<td class="s9 cl rt"> 98.59</td>
+<td class="s8 cl rt"> 80.73</td>
+<td class="s9 cl rt"> 98.88</td>
+<td class="s7 cl rt"> 70.00</td>
+<td class="s9 cl rt"> 90.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+Total tests in report: 123<hr>
+<b>Data from the following tests was used to generate this report</b><br clear=all>
+<table align=left>
+<tr>
+<td>work/regression/test_write_22237</td>
+</tr><tr>
+<td>work/regression/test_read_31138</td>
+</tr><tr>
+<td>work/regression/test_write_ro_32546</td>
+</tr><tr>
+<td>work/regression/test_read_wo_11797</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_1061</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_22694</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_10882</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_21565</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_5871</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_20754</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_31092</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_25069</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_7491</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_17303</td>
+</tr><tr>
+<td>work/regression/test_write_26181</td>
+</tr><tr>
+<td>work/regression/test_read_18744</td>
+</tr><tr>
+<td>work/regression/test_write_ro_32366</td>
+</tr><tr>
+<td>work/regression/test_read_wo_27729</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_25463</td>
+</tr><tr>
+<td>work/regression/test_write_26232</td>
+</tr><tr>
+<td>work/regression/test_read_27077</td>
+</tr><tr>
+<td>work/regression/test_write_ro_8428</td>
+</tr><tr>
+<td>work/regression/test_read_wo_6332</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_4380</td>
+</tr><tr>
+<td>work/regression/axi_write_both_delay_test_25834</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_28024</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_2683</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_11509</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_8520</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_15258</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_10338</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_24301</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_22861</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_29961</td>
+</tr><tr>
+<td>work/regression/test_write_23635</td>
+</tr><tr>
+<td>work/regression/test_read_28883</td>
+</tr><tr>
+<td>work/regression/test_write_ro_25490</td>
+</tr><tr>
+<td>work/regression/test_read_wo_16404</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_2129</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_14789</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_28873</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_19377</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_452</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_4953</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_20741</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_14241</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_22338</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_13287</td>
+</tr><tr>
+<td>work/regression/test_write_8831</td>
+</tr><tr>
+<td>work/regression/axi_write_both_test_17584</td>
+</tr><tr>
+<td>work/regression/test_read_4017</td>
+</tr><tr>
+<td>work/regression/test_write_ro_13974</td>
+</tr><tr>
+<td>work/regression/test_read_wo_17901</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_2630</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_8743</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_14255</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_27529</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_7623</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_13378</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_31522</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_13064</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_1244</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_8453</td>
+</tr><tr>
+<td>work/regression/test_write_22429</td>
+</tr><tr>
+<td>work/regression/axi_write_both_test_12165</td>
+</tr><tr>
+<td>work/regression/test_read_32702</td>
+</tr><tr>
+<td>work/regression/test_write_ro_6672</td>
+</tr><tr>
+<td>work/regression/test_read_wo_18961</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_23479</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_26611</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_9412</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_18100</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_24223</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_7104</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_2233</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_18927</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_8219</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_29550</td>
+</tr><tr>
+<td>work/regression/test_write_11965</td>
+</tr><tr>
+<td>work/regression/axi_write_both_test_11482</td>
+</tr><tr>
+<td>work/regression/test_read_21735</td>
+</tr><tr>
+<td>work/regression/test_write_ro_12860</td>
+</tr><tr>
+<td>work/regression/test_read_wo_6936</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_23004</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_10066</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_32629</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_30907</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_18325</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_6009</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_6425</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_26335</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_15875</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_27054</td>
+</tr><tr>
+<td>work/regression/test_write_29343</td>
+</tr><tr>
+<td>work/regression/axi_write_both_test_21283</td>
+</tr><tr>
+<td>work/regression/test_read_21186</td>
+</tr><tr>
+<td>work/regression/test_write_ro_28457</td>
+</tr><tr>
+<td>work/regression/test_read_wo_728</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_14634</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_11250</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_20352</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_24792</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_16638</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_26808</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_14867</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_24580</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_13718</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_10225</td>
+</tr><tr>
+<td>work/regression/test_write_1303</td>
+</tr><tr>
+<td>work/regression/axi_write_both_test_25221</td>
+</tr><tr>
+<td>work/regression/test_read_12581</td>
+</tr><tr>
+<td>work/regression/test_write_ro_13118</td>
+</tr><tr>
+<td>work/regression/test_read_wo_22956</td>
+</tr><tr>
+<td>work/regression/test_write_unaligned_14322</td>
+</tr><tr>
+<td>work/regression/write_addr_ob_test_29298</td>
+</tr><tr>
+<td>work/regression/test_read_unaligned_7218</td>
+</tr><tr>
+<td>work/regression/test_write_decerr_14448</td>
+</tr><tr>
+<td>work/regression/test_read_decerr_20282</td>
+</tr><tr>
+<td>work/regression/test_write_coverage_4754</td>
+</tr><tr>
+<td>work/regression/test_awaddr_coverage_17275</td>
+</tr><tr>
+<td>work/regression/test_araddr_coverage_32515</td>
+</tr><tr>
+<td>work/regression/axi_write_da_test_17719</td>
+</tr><tr>
+<td>work/regression/axi_write_test_addr_after_data_10878</td>
+</tr></table></div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

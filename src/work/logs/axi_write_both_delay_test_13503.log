@@ -1,0 +1,91 @@
+Command: /fetools/work_area/frontend/Batch_11/spoorthibhat/uvm/projects/AXI_Slave_Verification/src/work/simv +UVM_TESTNAME=axi_write_both_delay_test +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=13503 -cm line+cond+fsm+tgl+branch+assert -cm_dir work/regression.vdb -cm_name axi_write_both_delay_test_13503 -l work/logs/axi_write_both_delay_test_13503.log +UVM_NO_RELNOTES
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Sep 18 14:11 2026
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+### TOP INITIAL START : time=0
+### AFTER CONFIG SET : time=0
+UVM_INFO @ 0: reporter [RNTST] Running test axi_write_both_delay_test...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------
+Name                            Type                        Size  Value
+-----------------------------------------------------------------------
+uvm_test_top                    axi_write_both_delay_test   -     @477 
+  env                           axi_env                     -     @491 
+    inp_agt                     axi_inp_agent               -     @500 
+      inp_drv                   axi_driver                  -     @1030
+        rd_prt                  uvm_seq_item_pull_port      -     @1056
+        rsp_port                uvm_analysis_port           -     @1047
+        seq_item_port           uvm_seq_item_pull_port      -     @1038
+      inp_mon                   axi_inp_monitor             -     @758 
+        inp_monitor_port_read   uvm_analysis_port           -     @775 
+        inp_monitor_port_write  uvm_analysis_port           -     @766 
+      rd_sqr                    axi_sequencer               -     @907 
+        rsp_export              uvm_analysis_export         -     @915 
+        seq_item_export         uvm_seq_item_pull_imp       -     @1021
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+      wr_sqr                    axi_sequencer               -     @784 
+        rsp_export              uvm_analysis_export         -     @792 
+        seq_item_export         uvm_seq_item_pull_imp       -     @898 
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+    op_agt                      axi_op_agent                -     @508 
+      op_mon                    axi_op_monitor              -     @1084
+        op_m_port_read          uvm_analysis_port           -     @1101
+        op_m_port_write         uvm_analysis_port           -     @1092
+    scb                         axi_scoreboard              -     @516 
+      ip_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @577 
+        analysis_export         uvm_analysis_imp            -     @621 
+        get_ap                  uvm_analysis_port           -     @612 
+        get_peek_export         uvm_get_peek_imp            -     @594 
+        put_ap                  uvm_analysis_port           -     @603 
+        put_export              uvm_put_imp                 -     @585 
+      ip_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @524 
+        analysis_export         uvm_analysis_imp            -     @568 
+        get_ap                  uvm_analysis_port           -     @559 
+        get_peek_export         uvm_get_peek_imp            -     @541 
+        put_ap                  uvm_analysis_port           -     @550 
+        put_export              uvm_put_imp                 -     @532 
+      op_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @683 
+        analysis_export         uvm_analysis_imp            -     @727 
+        get_ap                  uvm_analysis_port           -     @718 
+        get_peek_export         uvm_get_peek_imp            -     @700 
+        put_ap                  uvm_analysis_port           -     @709 
+        put_export              uvm_put_imp                 -     @691 
+      op_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @630 
+        analysis_export         uvm_analysis_imp            -     @674 
+        get_ap                  uvm_analysis_port           -     @665 
+        get_peek_export         uvm_get_peek_imp            -     @647 
+        put_ap                  uvm_analysis_port           -     @656 
+        put_export              uvm_put_imp                 -     @638 
+    sub                         axi_subscriber              -     @736 
+      analysis_imp              uvm_analysis_imp            -     @744 
+-----------------------------------------------------------------------
+
+UVM_INFO axi_driver.sv(30) @ 0: uvm_test_top.env.inp_agt.inp_drv [DRV] Sequence Body started
+UVM_INFO axi_driver.sv(111) @ 45: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=8 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_driver.sv(129) @ 45: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=86 WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 55: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=8 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 55: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=86 WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 55: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=8 AWPROT=0
+UVM_INFO axi_op_monitor.sv(73) @ 55: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=86 WSTRB=2
+UVM_INFO axi_driver.sv(111) @ 195: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=0 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_driver.sv(129) @ 195: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=a7 WSTRB=3 WVALID=1 WREADY=1
+UVM_INFO axi_driver.sv(129) @ 345: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=b1 WSTRB=1 WVALID=1 WREADY=1
+Interrupt at time 231644915
+
+
+ 
+
+ 

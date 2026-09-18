@@ -1,0 +1,1248 @@
+Command: /fetools/work_area/frontend/Batch_11/spoorthibhat/uvm/projects/AXI_Slave_Verification/src/work/simv +UVM_TESTNAME=test_read +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=21186 -cm line+cond+fsm+tgl+branch+assert -cm_dir work/regression.vdb -cm_name test_read_21186 -l work/logs/test_read_21186.log +UVM_NO_RELNOTES
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Sep 18 14:55 2026
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+### TOP INITIAL START : time=0
+### AFTER CONFIG SET : time=0
+UVM_INFO @ 0: reporter [RNTST] Running test test_read...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------
+Name                            Type                        Size  Value
+-----------------------------------------------------------------------
+uvm_test_top                    test_read                   -     @477 
+  env                           axi_env                     -     @491 
+    inp_agt                     axi_inp_agent               -     @500 
+      inp_drv                   axi_driver                  -     @1030
+        rd_prt                  uvm_seq_item_pull_port      -     @1056
+        rsp_port                uvm_analysis_port           -     @1047
+        seq_item_port           uvm_seq_item_pull_port      -     @1038
+      inp_mon                   axi_inp_monitor             -     @758 
+        inp_monitor_port_read   uvm_analysis_port           -     @775 
+        inp_monitor_port_write  uvm_analysis_port           -     @766 
+      rd_sqr                    axi_sequencer               -     @907 
+        rsp_export              uvm_analysis_export         -     @915 
+        seq_item_export         uvm_seq_item_pull_imp       -     @1021
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+      wr_sqr                    axi_sequencer               -     @784 
+        rsp_export              uvm_analysis_export         -     @792 
+        seq_item_export         uvm_seq_item_pull_imp       -     @898 
+        arbitration_queue       array                       0     -    
+        lock_queue              array                       0     -    
+        num_last_reqs           integral                    32    'd1  
+        num_last_rsps           integral                    32    'd1  
+    op_agt                      axi_op_agent                -     @508 
+      op_mon                    axi_op_monitor              -     @1084
+        op_m_port_read          uvm_analysis_port           -     @1101
+        op_m_port_write         uvm_analysis_port           -     @1092
+    scb                         axi_scoreboard              -     @516 
+      ip_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @577 
+        analysis_export         uvm_analysis_imp            -     @621 
+        get_ap                  uvm_analysis_port           -     @612 
+        get_peek_export         uvm_get_peek_imp            -     @594 
+        put_ap                  uvm_analysis_port           -     @603 
+        put_export              uvm_put_imp                 -     @585 
+      ip_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @524 
+        analysis_export         uvm_analysis_imp            -     @568 
+        get_ap                  uvm_analysis_port           -     @559 
+        get_peek_export         uvm_get_peek_imp            -     @541 
+        put_ap                  uvm_analysis_port           -     @550 
+        put_export              uvm_put_imp                 -     @532 
+      op_mon_fifo_read          uvm_tlm_analysis_fifo #(T)  -     @683 
+        analysis_export         uvm_analysis_imp            -     @727 
+        get_ap                  uvm_analysis_port           -     @718 
+        get_peek_export         uvm_get_peek_imp            -     @700 
+        put_ap                  uvm_analysis_port           -     @709 
+        put_export              uvm_put_imp                 -     @691 
+      op_mon_fifo_write         uvm_tlm_analysis_fifo #(T)  -     @630 
+        analysis_export         uvm_analysis_imp            -     @674 
+        get_ap                  uvm_analysis_port           -     @665 
+        get_peek_export         uvm_get_peek_imp            -     @647 
+        put_ap                  uvm_analysis_port           -     @656 
+        put_export              uvm_put_imp                 -     @638 
+    sub                         axi_subscriber              -     @736 
+      analysis_imp              uvm_analysis_imp            -     @744 
+-----------------------------------------------------------------------
+
+UVM_INFO axi_driver.sv(30) @ 0: uvm_test_top.env.inp_agt.inp_drv [DRV] Sequence Body started
+UVM_INFO axi_driver.sv(111) @ 45: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=c AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 55: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=c AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 55: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=c AWPROT=111
+UVM_INFO axi_driver.sv(129) @ 75: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=67c851d8 WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 85: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=67c851d8 WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 85: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=67c851d8 WSTRB=6
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00c85100
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 105: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 115: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 115: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 115: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 115: uvm_test_top.env.scb [SCB] 6
+UVM_INFO axi_scoreboard.sv(105) @ 115: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=c Actual_AWADDR=c
+UVM_INFO axi_scoreboard.sv(110) @ 115: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=67c851d8 Actual_WDATA=67c851d8
+UVM_INFO axi_scoreboard.sv(115) @ 115: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=6 Actual_WSTRB=6
+UVM_INFO axi_scoreboard.sv(120) @ 115: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 155: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=c AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 165: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=c AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 165: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=c AWPROT=10
+UVM_INFO axi_driver.sv(129) @ 185: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=3b75a39f WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 195: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=3b75a39f WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 195: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=3b75a39f WSTRB=0
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 00000000
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 215: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 225: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 225: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 225: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 225: uvm_test_top.env.scb [SCB] 0
+UVM_INFO axi_scoreboard.sv(105) @ 225: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=c Actual_AWADDR=c
+UVM_INFO axi_scoreboard.sv(110) @ 225: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=3b75a39f Actual_WDATA=3b75a39f
+UVM_INFO axi_scoreboard.sv(115) @ 225: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=0 Actual_WSTRB=0
+UVM_INFO axi_scoreboard.sv(120) @ 225: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 245: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=20 AWPROT=1 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 255: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=20 AWPROT=1 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 255: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=20 AWPROT=1
+UVM_INFO axi_driver.sv(129) @ 275: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=73d57257 WSTRB=b WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 285: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=73d57257 WSTRB=b WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 285: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=73d57257 WSTRB=b
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 305: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 315: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 315: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 315: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 315: uvm_test_top.env.scb [SCB] b
+UVM_INFO axi_scoreboard.sv(105) @ 315: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=20 Actual_AWADDR=20
+UVM_INFO axi_scoreboard.sv(110) @ 315: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=73d57257 Actual_WDATA=73d57257
+UVM_INFO axi_scoreboard.sv(115) @ 315: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=b Actual_WSTRB=b
+UVM_INFO axi_scoreboard.sv(120) @ 315: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 335: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=8 AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 345: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=8 AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 345: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=8 AWPROT=100
+UVM_INFO axi_driver.sv(129) @ 365: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=10cbd06e WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 375: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=10cbd06e WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 375: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=10cbd06e WSTRB=0
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 00000000
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 395: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 405: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 405: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 405: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 405: uvm_test_top.env.scb [SCB] 0
+UVM_INFO axi_scoreboard.sv(105) @ 405: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=8 Actual_AWADDR=8
+UVM_INFO axi_scoreboard.sv(110) @ 405: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=10cbd06e Actual_WDATA=10cbd06e
+UVM_INFO axi_scoreboard.sv(115) @ 405: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=0 Actual_WSTRB=0
+UVM_INFO axi_scoreboard.sv(120) @ 405: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 425: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=c AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 435: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=c AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 435: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=c AWPROT=10
+UVM_INFO axi_driver.sv(129) @ 455: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=20e9680 WSTRB=d WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 465: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=20e9680 WSTRB=d WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 465: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=20e9680 WSTRB=d
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 00000000
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 485: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 495: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 495: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 495: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 495: uvm_test_top.env.scb [SCB] d
+UVM_INFO axi_scoreboard.sv(105) @ 495: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=c Actual_AWADDR=c
+UVM_INFO axi_scoreboard.sv(110) @ 495: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=20e9680 Actual_WDATA=20e9680
+UVM_INFO axi_scoreboard.sv(115) @ 495: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=d Actual_WSTRB=d
+UVM_INFO axi_scoreboard.sv(120) @ 495: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 515: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=14 AWPROT=1 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 525: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=14 AWPROT=1 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 525: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=14 AWPROT=1
+UVM_INFO axi_driver.sv(129) @ 545: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=870af9cc WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 555: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=870af9cc WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 555: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=870af9cc WSTRB=2
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 575: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 585: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 585: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 585: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 585: uvm_test_top.env.scb [SCB] 2
+UVM_INFO axi_scoreboard.sv(105) @ 585: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=14 Actual_AWADDR=14
+UVM_INFO axi_scoreboard.sv(110) @ 585: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=870af9cc Actual_WDATA=870af9cc
+UVM_INFO axi_scoreboard.sv(115) @ 585: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=2 Actual_WSTRB=2
+UVM_INFO axi_scoreboard.sv(120) @ 585: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 605: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=2c AWPROT=110 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 615: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=2c AWPROT=110 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 615: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=2c AWPROT=110
+UVM_INFO axi_driver.sv(129) @ 635: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=a34956bd WSTRB=f WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 645: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=a34956bd WSTRB=f WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 645: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=a34956bd WSTRB=f
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 665: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=10
+UVM_INFO axi_inp_monitor.sv(81) @ 675: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=10 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 675: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 675: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=10
+UVM_INFO axi_scoreboard.sv(42) @ 675: uvm_test_top.env.scb [SCB] f
+UVM_INFO axi_scoreboard.sv(105) @ 675: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=2c Actual_AWADDR=2c
+UVM_INFO axi_scoreboard.sv(110) @ 675: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=a34956bd Actual_WDATA=a34956bd
+UVM_INFO axi_scoreboard.sv(115) @ 675: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=f Actual_WSTRB=f
+UVM_INFO axi_scoreboard.sv(120) @ 675: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=10 Actual_BRESP=10
+UVM_INFO axi_driver.sv(111) @ 695: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=30 AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 705: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=30 AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 705: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=30 AWPROT=100
+UVM_INFO axi_driver.sv(129) @ 725: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=36b7ee00 WSTRB=f WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 735: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=36b7ee00 WSTRB=f WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 735: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=36b7ee00 WSTRB=f
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 755: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=10
+UVM_INFO axi_inp_monitor.sv(81) @ 765: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=10 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 765: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 765: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=10
+UVM_INFO axi_scoreboard.sv(42) @ 765: uvm_test_top.env.scb [SCB] f
+UVM_INFO axi_scoreboard.sv(105) @ 765: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=30 Actual_AWADDR=30
+UVM_INFO axi_scoreboard.sv(110) @ 765: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=36b7ee00 Actual_WDATA=36b7ee00
+UVM_INFO axi_scoreboard.sv(115) @ 765: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=f Actual_WSTRB=f
+UVM_INFO axi_scoreboard.sv(120) @ 765: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=10 Actual_BRESP=10
+UVM_INFO axi_driver.sv(111) @ 785: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=28 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 795: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=28 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 795: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=28 AWPROT=0
+UVM_INFO axi_driver.sv(129) @ 815: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=b9cb17e2 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 825: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=b9cb17e2 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 825: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=b9cb17e2 WSTRB=a
+reg_file[0] = 00000000
+reg_file[1] = 00000000
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 845: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=10
+UVM_INFO axi_inp_monitor.sv(81) @ 855: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=10 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 855: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 855: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=10
+UVM_INFO axi_scoreboard.sv(42) @ 855: uvm_test_top.env.scb [SCB] a
+UVM_INFO axi_scoreboard.sv(105) @ 855: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=28 Actual_AWADDR=28
+UVM_INFO axi_scoreboard.sv(110) @ 855: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=b9cb17e2 Actual_WDATA=b9cb17e2
+UVM_INFO axi_scoreboard.sv(115) @ 855: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=a Actual_WSTRB=a
+UVM_INFO axi_scoreboard.sv(120) @ 855: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=10 Actual_BRESP=10
+UVM_INFO axi_driver.sv(111) @ 875: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=4 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 885: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=4 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 885: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=4 AWPROT=101
+UVM_INFO axi_driver.sv(129) @ 905: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=4f83d939 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 915: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=4f83d939 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 915: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=4f83d939 WSTRB=a
+reg_file[0] = 00000000
+reg_file[1] = 4f00d900
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 935: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 945: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 945: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 945: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 945: uvm_test_top.env.scb [SCB] a
+UVM_INFO axi_scoreboard.sv(105) @ 945: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=4 Actual_AWADDR=4
+UVM_INFO axi_scoreboard.sv(110) @ 945: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=4f83d939 Actual_WDATA=4f83d939
+UVM_INFO axi_scoreboard.sv(115) @ 945: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=a Actual_WSTRB=a
+UVM_INFO axi_scoreboard.sv(120) @ 945: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 965: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=4 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 975: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=4 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 975: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=4 AWPROT=101
+UVM_INFO axi_driver.sv(129) @ 995: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=660788c6 WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1005: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=660788c6 WSTRB=2 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1005: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=660788c6 WSTRB=2
+reg_file[0] = 00000000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 020e0080
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1025: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1035: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1035: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1035: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1035: uvm_test_top.env.scb [SCB] 2
+UVM_INFO axi_scoreboard.sv(105) @ 1035: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=4 Actual_AWADDR=4
+UVM_INFO axi_scoreboard.sv(110) @ 1035: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=660788c6 Actual_WDATA=660788c6
+UVM_INFO axi_scoreboard.sv(115) @ 1035: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=2 Actual_WSTRB=2
+UVM_INFO axi_scoreboard.sv(120) @ 1035: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1055: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=c AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1065: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=c AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1065: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=c AWPROT=101
+UVM_INFO axi_driver.sv(129) @ 1085: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=dae7af3 WSTRB=d WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1095: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=dae7af3 WSTRB=d WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1095: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=dae7af3 WSTRB=d
+reg_file[0] = 00000000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 00000000
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1115: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1125: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1125: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1125: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1125: uvm_test_top.env.scb [SCB] d
+UVM_INFO axi_scoreboard.sv(105) @ 1125: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=c Actual_AWADDR=c
+UVM_INFO axi_scoreboard.sv(110) @ 1125: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=dae7af3 Actual_WDATA=dae7af3
+UVM_INFO axi_scoreboard.sv(115) @ 1125: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=d Actual_WSTRB=d
+UVM_INFO axi_scoreboard.sv(120) @ 1125: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1145: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=1c AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1155: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=1c AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1155: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=1c AWPROT=0
+UVM_INFO axi_driver.sv(129) @ 1175: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=db781e7 WSTRB=b WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1185: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=db781e7 WSTRB=b WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1185: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=db781e7 WSTRB=b
+reg_file[0] = 00000000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 73007257
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1205: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1215: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1215: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1215: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1215: uvm_test_top.env.scb [SCB] b
+UVM_INFO axi_scoreboard.sv(105) @ 1215: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=1c Actual_AWADDR=1c
+UVM_INFO axi_scoreboard.sv(110) @ 1215: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=db781e7 Actual_WDATA=db781e7
+UVM_INFO axi_scoreboard.sv(115) @ 1215: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=b Actual_WSTRB=b
+UVM_INFO axi_scoreboard.sv(120) @ 1215: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1235: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=20 AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1245: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=20 AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1245: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=20 AWPROT=111
+UVM_INFO axi_driver.sv(129) @ 1265: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=e90d3de7 WSTRB=5 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1275: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=e90d3de7 WSTRB=5 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1275: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=e90d3de7 WSTRB=5
+reg_file[0] = 00000000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1295: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1305: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1305: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1305: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1305: uvm_test_top.env.scb [SCB] 5
+UVM_INFO axi_scoreboard.sv(105) @ 1305: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=20 Actual_AWADDR=20
+UVM_INFO axi_scoreboard.sv(110) @ 1305: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=e90d3de7 Actual_WDATA=e90d3de7
+UVM_INFO axi_scoreboard.sv(115) @ 1305: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=5 Actual_WSTRB=5
+UVM_INFO axi_scoreboard.sv(120) @ 1305: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1325: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=18 AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1335: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=18 AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1335: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=18 AWPROT=10
+UVM_INFO axi_driver.sv(129) @ 1355: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=90dddec4 WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1365: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=90dddec4 WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1365: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=90dddec4 WSTRB=0
+reg_file[0] = 00000000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1385: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1395: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1395: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1395: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1395: uvm_test_top.env.scb [SCB] 0
+UVM_INFO axi_scoreboard.sv(105) @ 1395: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=18 Actual_AWADDR=18
+UVM_INFO axi_scoreboard.sv(110) @ 1395: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=90dddec4 Actual_WDATA=90dddec4
+UVM_INFO axi_scoreboard.sv(115) @ 1395: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=0 Actual_WSTRB=0
+UVM_INFO axi_scoreboard.sv(120) @ 1395: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1415: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=0 AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1425: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=0 AWPROT=111 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1425: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=0 AWPROT=111
+UVM_INFO axi_driver.sv(129) @ 1445: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=5b9df067 WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1455: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=5b9df067 WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1455: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=5b9df067 WSTRB=6
+reg_file[0] = 009df000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1475: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1485: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1485: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1485: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1485: uvm_test_top.env.scb [SCB] 6
+UVM_INFO axi_scoreboard.sv(105) @ 1485: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=0 Actual_AWADDR=0
+UVM_INFO axi_scoreboard.sv(110) @ 1485: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=5b9df067 Actual_WDATA=5b9df067
+UVM_INFO axi_scoreboard.sv(115) @ 1485: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=6 Actual_WSTRB=6
+UVM_INFO axi_scoreboard.sv(120) @ 1485: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1505: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=24 AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1515: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=24 AWPROT=10 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1515: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=24 AWPROT=10
+UVM_INFO axi_driver.sv(129) @ 1535: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=2ce7356d WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1545: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=2ce7356d WSTRB=0 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1545: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=2ce7356d WSTRB=0
+reg_file[0] = 009df000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = 0dae00f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1565: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1575: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1575: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1575: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1575: uvm_test_top.env.scb [SCB] 0
+UVM_INFO axi_scoreboard.sv(105) @ 1575: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=24 Actual_AWADDR=24
+UVM_INFO axi_scoreboard.sv(110) @ 1575: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=2ce7356d Actual_WDATA=2ce7356d
+UVM_INFO axi_scoreboard.sv(115) @ 1575: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=0 Actual_WSTRB=0
+UVM_INFO axi_scoreboard.sv(120) @ 1575: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1595: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=c AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1605: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=c AWPROT=100 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1605: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=c AWPROT=100
+UVM_INFO axi_driver.sv(129) @ 1625: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=e1382733 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1635: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=e1382733 WSTRB=a WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1635: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=e1382733 WSTRB=a
+reg_file[0] = 009df000
+reg_file[1] = 4f008800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1655: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1665: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1665: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1665: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1665: uvm_test_top.env.scb [SCB] a
+UVM_INFO axi_scoreboard.sv(105) @ 1665: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=c Actual_AWADDR=c
+UVM_INFO axi_scoreboard.sv(110) @ 1665: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=e1382733 Actual_WDATA=e1382733
+UVM_INFO axi_scoreboard.sv(115) @ 1665: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=a Actual_WSTRB=a
+UVM_INFO axi_scoreboard.sv(120) @ 1665: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1685: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=4 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1695: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=4 AWPROT=0 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1695: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=4 AWPROT=0
+UVM_INFO axi_driver.sv(129) @ 1715: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=1fa57663 WSTRB=4 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1725: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=1fa57663 WSTRB=4 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1725: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=1fa57663 WSTRB=4
+reg_file[0] = 009df000
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1745: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_inp_monitor.sv(81) @ 1755: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1755: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1755: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1755: uvm_test_top.env.scb [SCB] 4
+UVM_INFO axi_scoreboard.sv(105) @ 1755: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=4 Actual_AWADDR=4
+UVM_INFO axi_scoreboard.sv(110) @ 1755: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=1fa57663 Actual_WDATA=1fa57663
+UVM_INFO axi_scoreboard.sv(115) @ 1755: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=4 Actual_WSTRB=4
+UVM_INFO axi_scoreboard.sv(120) @ 1755: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(111) @ 1775: uvm_test_top.env.inp_agt.inp_drv [AXI_AW] AWADDR=0 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_inp_monitor.sv(64) @ 1785: uvm_test_top.env.inp_agt.inp_mon [AXI_AW] AWADDR=0 AWPROT=101 AWVALID=1 AWREADY=1
+UVM_INFO axi_op_monitor.sv(64) @ 1785: uvm_test_top.env.op_agt.op_mon [OP_AW] AWVALID=1 AWREADY=1 AWADDR=0 AWPROT=101
+UVM_INFO axi_driver.sv(129) @ 1805: uvm_test_top.env.inp_agt.inp_drv [AXI_W] WDATA=5e88c3ca WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_inp_monitor.sv(73) @ 1815: uvm_test_top.env.inp_agt.inp_mon [AXI_W] WDATA=5e88c3ca WSTRB=6 WVALID=1 WREADY=1
+UVM_INFO axi_op_monitor.sv(73) @ 1815: uvm_test_top.env.op_agt.op_mon [OP_W] WVALID=1 WREADY=1 WDATA=5e88c3ca WSTRB=6
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_driver.sv(145) @ 1835: uvm_test_top.env.inp_agt.inp_drv [AXI_B] BREADY=1 BVALID=1 BRESP=0
+UVM_INFO axi_driver.sv(163) @ 1835: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=24 AWPROT=11 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1845: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=24 ARPROT=11 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1845: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=24 ARPROT=11
+UVM_INFO axi_inp_monitor.sv(81) @ 1845: uvm_test_top.env.inp_agt.inp_mon [AXI_B] BREADY=1 BRESP=0 BVALID=1
+UVM_INFO axi_subscriber.sv(158) @ 1845: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(81) @ 1845: uvm_test_top.env.op_agt.op_mon [OP_B] BVALID=1 BREADY=1 BRESP=0
+UVM_INFO axi_scoreboard.sv(42) @ 1845: uvm_test_top.env.scb [SCB] 6
+UVM_INFO axi_scoreboard.sv(105) @ 1845: uvm_test_top.env.scb [SCB] WRITE ADDRESS PASS: Exp_AWADDR=0 Actual_AWADDR=0
+UVM_INFO axi_scoreboard.sv(110) @ 1845: uvm_test_top.env.scb [SCB] WRITE DATA PASS: Exp_WDATA=5e88c3ca Actual_WDATA=5e88c3ca
+UVM_INFO axi_scoreboard.sv(115) @ 1845: uvm_test_top.env.scb [SCB] WRITE WSTRB PASS: Exp_WSTRB=6 Actual_WSTRB=6
+UVM_INFO axi_scoreboard.sv(120) @ 1845: uvm_test_top.env.scb [SCB] WRITE BRESP PASS: Exp_BRESP=0 Actual_BRESP=0
+UVM_INFO axi_driver.sv(179) @ 1845: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 1855: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 1855: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 1855: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 1855: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=24 Actual_ARADDR=24
+UVM_INFO axi_scoreboard.sv(133) @ 1855: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 1855: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 1865: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=30 AWPROT=110 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1875: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=30 ARPROT=110 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1875: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=30 ARPROT=110
+UVM_INFO axi_driver.sv(179) @ 1875: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 1885: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 1885: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 1885: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 1885: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=30 Actual_ARADDR=30
+UVM_INFO axi_scoreboard.sv(133) @ 1885: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 1885: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 1895: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=10 AWPROT=10 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1905: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=10 ARPROT=10 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1905: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=10 ARPROT=10
+UVM_INFO axi_driver.sv(179) @ 1905: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 1915: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 1915: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 1915: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 1915: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=10 Actual_ARADDR=10
+UVM_INFO axi_scoreboard.sv(133) @ 1915: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 1915: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 1925: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=0 AWPROT=101 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1935: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=0 ARPROT=101 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1935: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=0 ARPROT=101
+UVM_INFO axi_driver.sv(179) @ 1935: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=88c300
+UVM_INFO axi_inp_monitor.sv(99) @ 1945: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=88c300 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 1945: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 1945: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=88c300 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 1945: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=0 Actual_ARADDR=0
+UVM_INFO axi_scoreboard.sv(133) @ 1945: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=88c300 Actual_RDATA=88c300
+UVM_INFO axi_scoreboard.sv(138) @ 1945: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 1955: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=14 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1965: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=14 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1965: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=14 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 1965: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=f900
+UVM_INFO axi_inp_monitor.sv(99) @ 1975: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=f900 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 1975: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 1975: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=f900 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 1975: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=14 Actual_ARADDR=14
+UVM_INFO axi_scoreboard.sv(133) @ 1975: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=f900 Actual_RDATA=f900
+UVM_INFO axi_scoreboard.sv(138) @ 1975: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 1985: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=0 AWPROT=0 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 1995: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=0 ARPROT=0 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 1995: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=0 ARPROT=0
+UVM_INFO axi_driver.sv(179) @ 1995: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=88c300
+UVM_INFO axi_inp_monitor.sv(99) @ 2005: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=88c300 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2005: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2005: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=88c300 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2005: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=0 Actual_ARADDR=0
+UVM_INFO axi_scoreboard.sv(133) @ 2005: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=88c300 Actual_RDATA=88c300
+UVM_INFO axi_scoreboard.sv(138) @ 2005: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2015: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=20 AWPROT=111 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2025: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=20 ARPROT=111 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2025: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=20 ARPROT=111
+UVM_INFO axi_driver.sv(179) @ 2025: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=730d72e7
+UVM_INFO axi_inp_monitor.sv(99) @ 2035: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=730d72e7 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2035: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2035: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=730d72e7 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2035: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=20 Actual_ARADDR=20
+UVM_INFO axi_scoreboard.sv(133) @ 2035: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=730d72e7 Actual_RDATA=730d72e7
+UVM_INFO axi_scoreboard.sv(138) @ 2035: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2045: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=c AWPROT=1 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2055: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=c ARPROT=1 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2055: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=c ARPROT=1
+UVM_INFO axi_driver.sv(179) @ 2055: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=e1ae27f3
+UVM_INFO axi_inp_monitor.sv(99) @ 2065: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=e1ae27f3 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2065: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2065: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=e1ae27f3 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2065: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=c Actual_ARADDR=c
+UVM_INFO axi_scoreboard.sv(133) @ 2065: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=e1ae27f3 Actual_RDATA=e1ae27f3
+UVM_INFO axi_scoreboard.sv(138) @ 2065: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2075: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=2c AWPROT=11 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2085: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=2c ARPROT=11 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2085: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=2c ARPROT=11
+UVM_INFO axi_driver.sv(179) @ 2085: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 2095: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2095: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2095: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2095: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=2c Actual_ARADDR=2c
+UVM_INFO axi_scoreboard.sv(133) @ 2095: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 2095: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2105: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=8 AWPROT=10 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2115: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=8 ARPROT=10 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2115: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=8 ARPROT=10
+UVM_INFO axi_driver.sv(179) @ 2115: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 2125: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2125: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2125: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2125: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=8 Actual_ARADDR=8
+UVM_INFO axi_scoreboard.sv(133) @ 2125: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 2125: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2135: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=14 AWPROT=10 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2145: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=14 ARPROT=10 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2145: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=14 ARPROT=10
+UVM_INFO axi_driver.sv(179) @ 2145: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=f900
+UVM_INFO axi_inp_monitor.sv(99) @ 2155: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=f900 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2155: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2155: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=f900 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2155: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=14 Actual_ARADDR=14
+UVM_INFO axi_scoreboard.sv(133) @ 2155: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=f900 Actual_RDATA=f900
+UVM_INFO axi_scoreboard.sv(138) @ 2155: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2165: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=28 AWPROT=100 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2175: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=28 ARPROT=100 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2175: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=28 ARPROT=100
+UVM_INFO axi_driver.sv(179) @ 2175: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 2185: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2185: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2185: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2185: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=28 Actual_ARADDR=28
+UVM_INFO axi_scoreboard.sv(133) @ 2185: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 2185: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2195: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=1c AWPROT=1 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2205: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=1c ARPROT=1 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2205: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=1c ARPROT=1
+UVM_INFO axi_driver.sv(179) @ 2205: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=d0081e7
+UVM_INFO axi_inp_monitor.sv(99) @ 2215: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=d0081e7 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2215: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2215: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=d0081e7 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2215: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=1c Actual_ARADDR=1c
+UVM_INFO axi_scoreboard.sv(133) @ 2215: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=d0081e7 Actual_RDATA=d0081e7
+UVM_INFO axi_scoreboard.sv(138) @ 2215: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2225: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=20 AWPROT=110 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2235: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=20 ARPROT=110 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2235: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=20 ARPROT=110
+UVM_INFO axi_driver.sv(179) @ 2235: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=730d72e7
+UVM_INFO axi_inp_monitor.sv(99) @ 2245: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=730d72e7 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2245: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2245: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=730d72e7 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2245: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=20 Actual_ARADDR=20
+UVM_INFO axi_scoreboard.sv(133) @ 2245: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=730d72e7 Actual_RDATA=730d72e7
+UVM_INFO axi_scoreboard.sv(138) @ 2245: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2255: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=14 AWPROT=101 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2265: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=14 ARPROT=101 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2265: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=14 ARPROT=101
+UVM_INFO axi_driver.sv(179) @ 2265: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=f900
+UVM_INFO axi_inp_monitor.sv(99) @ 2275: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=f900 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2275: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2275: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=f900 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2275: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=14 Actual_ARADDR=14
+UVM_INFO axi_scoreboard.sv(133) @ 2275: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=f900 Actual_RDATA=f900
+UVM_INFO axi_scoreboard.sv(138) @ 2275: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2285: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=0 AWPROT=11 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2295: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=0 ARPROT=11 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2295: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=0 ARPROT=11
+UVM_INFO axi_driver.sv(179) @ 2295: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=88c300
+UVM_INFO axi_inp_monitor.sv(99) @ 2305: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=88c300 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2305: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2305: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=88c300 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2305: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=0 Actual_ARADDR=0
+UVM_INFO axi_scoreboard.sv(133) @ 2305: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=88c300 Actual_RDATA=88c300
+UVM_INFO axi_scoreboard.sv(138) @ 2305: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2315: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=18 AWPROT=1 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2325: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=18 ARPROT=1 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2325: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=18 ARPROT=1
+UVM_INFO axi_driver.sv(179) @ 2325: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 2335: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2335: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2335: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2335: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=18 Actual_ARADDR=18
+UVM_INFO axi_scoreboard.sv(133) @ 2335: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 2335: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2345: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=28 AWPROT=111 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2355: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=28 ARPROT=111 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2355: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=28 ARPROT=111
+UVM_INFO axi_driver.sv(179) @ 2355: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO axi_inp_monitor.sv(99) @ 2365: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=0 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2365: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2365: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=0 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2365: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=28 Actual_ARADDR=28
+UVM_INFO axi_scoreboard.sv(133) @ 2365: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=0 Actual_RDATA=0
+UVM_INFO axi_scoreboard.sv(138) @ 2365: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2375: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=c AWPROT=100 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2385: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=c ARPROT=100 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2385: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=c ARPROT=100
+UVM_INFO axi_driver.sv(179) @ 2385: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=e1ae27f3
+UVM_INFO axi_inp_monitor.sv(99) @ 2395: uvm_test_top.env.inp_agt.inp_mon [AXI_R] RDATA=e1ae27f3 RRESP=0 RVALID=1 RREADY=1
+UVM_INFO axi_subscriber.sv(158) @ 2395: uvm_test_top.env.sub [sub] [DRIVER]:INPUT RECIEVED
+UVM_INFO axi_op_monitor.sv(99) @ 2395: uvm_test_top.env.op_agt.op_mon [OP_R] RVALID=1 RREADY=1 RDATA=e1ae27f3 RRESP=0
+UVM_INFO axi_scoreboard.sv(128) @ 2395: uvm_test_top.env.scb [SCB] READ ADDRESS PASS: Exp_ARADDR=c Actual_ARADDR=c
+UVM_INFO axi_scoreboard.sv(133) @ 2395: uvm_test_top.env.scb [SCB] READ DATA PASS: Exp_RDATA=e1ae27f3 Actual_RDATA=e1ae27f3
+UVM_INFO axi_scoreboard.sv(138) @ 2395: uvm_test_top.env.scb [SCB] READ RRESP PASS: Exp_RRESP=0 Actual_RRESP=0
+UVM_INFO axi_driver.sv(163) @ 2405: uvm_test_top.env.inp_agt.inp_drv [AXI_AR] ARADDR=24 AWPROT=11 ARVALID=1 ARREADY=1
+reg_file[0] = 0088c300
+reg_file[1] = 4fa58800
+reg_file[2] = 00000000
+reg_file[3] = e1ae27f3
+reg_file[4] = 00000000
+reg_file[5] = 0000f900
+reg_file[6] = 00000000
+reg_file[7] = 0d0081e7
+reg_file[8] = 730d72e7
+reg_file[9] = 00000000
+reg_file[10] = 00000000
+reg_file[11] = 00000000
+reg_file[12] = 00000000
+reg_file[13] = 00000000
+reg_file[14] = 00000000
+reg_file[15] = 00000000
+UVM_INFO axi_inp_monitor.sv(90) @ 2415: uvm_test_top.env.inp_agt.inp_mon [AXI_AR] ARADDR=24 ARPROT=11 ARVALID=1 ARREADY=1
+UVM_INFO axi_op_monitor.sv(90) @ 2415: uvm_test_top.env.op_agt.op_mon [OP_AR] ARVALID=1 ARREADY=1 ARADDR=24 ARPROT=11
+UVM_INFO axi_driver.sv(179) @ 2415: uvm_test_top.env.inp_agt.inp_drv [AXI_R] RREADY=1 RVALID=1 RRESP=0 RDATA=0
+UVM_INFO /fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_objection.svh(1274) @ 2415: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO axi_subscriber.sv(163) @ 2415: uvm_test_top.env.sub [sub] INPUT COVERAGE = 93.750000
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  499
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AXI_AR]    40
+[AXI_AW]    40
+[AXI_B]    40
+[AXI_R]    39
+[AXI_W]    40
+[DRV]     1
+[OP_AR]    20
+[OP_AW]    20
+[OP_B]    20
+[OP_R]    19
+[OP_W]    20
+[RNTST]     1
+[SCB]   157
+[TEST_DONE]     1
+[UVMTOP]     1
+[sub]    40
+$finish called from file "/fetools/synopsys/installed_tools/vcs/vcs/Q-2020.03-SP2-8/etc/uvm/base/uvm_root.svh", line 437.
+$finish at simulation time                 2415
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2415 ns
+CPU Time:      0.590 seconds;       Data structure size:   0.5Mb
+Fri Sep 18 14:55:26 2026

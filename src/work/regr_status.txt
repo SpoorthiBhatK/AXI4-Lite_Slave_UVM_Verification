@@ -1,0 +1,15 @@
+test_write 1303 PASS
+axi_write_both_test 25221 PASS
+test_read 12581 PASS
+test_write_ro 13118 PASS
+test_read_wo 22956 PASS
+test_write_unaligned 14322 PASS
+write_addr_ob_test 29298 PASS
+test_read_unaligned 7218 PASS
+test_write_decerr 14448 PASS
+test_read_decerr 20282 PASS
+test_write_coverage 4754 PASS
+test_awaddr_coverage 17275 PASS
+test_araddr_coverage 32515 PASS
+axi_write_da_test 17719 PASS
+axi_write_test_addr_after_data 10878 PASS
