@@ -1,1 +1,1 @@
-[AXI_Test_Plan](https://mirafra2-my.sharepoint.com/:x:/r/personal/spoorthibhat_mirafra2_onmicrosoft_com/Documents/AXI_TestPlan_SpoorthiBhatK_6935.xlsx?d=w2deb027df1c04066b6b6886176c4a40c&csf=1&web=1&e=5LYKK2)
+[AXI_Test_Plan](https://mirafra2-my.sharepoint.com/:x:/g/personal/spoorthibhat_mirafra2_onmicrosoft_com/IQB9AustwPFmQLa2iGF2xKQMAXEY2-rTX9H_AkUHcPmzvhY?e=t0KVlY)
