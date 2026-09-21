@@ -17,10 +17,8 @@ endfunction
 
 function void build_phase(uvm_phase phase);
 	super.build_phase(phase);
-
 	if(!uvm_config_db #(axi_config)::get(this,"","axi_config",cfg))
 		`uvm_fatal(get_type_name(),"Inp Mon get failed")
-
 	if(!uvm_config_db #(virtual axi_interface.IP_MON)::get(this,"","axi_inp_mon_vif",ip_m_vif))
 		`uvm_fatal(get_type_name(),"Input Monitor VIF get failed")
 endfunction
@@ -63,7 +61,6 @@ task collect_aw(axi_seq_item write_item);
 	write_item.AWREADY = ip_m_vif.inp_mon_cb.AWREADY;
 	`uvm_info("AXI_AW",$sformatf("AWADDR=%0h AWPROT=%0b AWVALID=%0b AWREADY=%0b", write_item.AWADDR, write_item.AWPROT, write_item.AWVALID, ip_m_vif.inp_mon_cb.AWREADY), UVM_NONE)
 endtask
-
 task collect_w(axi_seq_item write_item);
 	@(posedge ip_m_vif.ACLK iff (ip_m_vif.inp_mon_cb.WVALID && ip_m_vif.inp_mon_cb.WREADY));
 	write_item.WDATA = ip_m_vif.inp_mon_cb.WDATA;
@@ -72,7 +69,6 @@ task collect_w(axi_seq_item write_item);
 	write_item.WREADY = ip_m_vif.inp_mon_cb.WREADY;
 	`uvm_info("AXI_W",$sformatf("WDATA=%0h WSTRB=%0h WVALID=%0b WREADY=%0b", write_item.WDATA, write_item.WSTRB, write_item.WVALID, ip_m_vif.inp_mon_cb.WREADY), UVM_NONE)
 endtask
-
 task collect_b(axi_seq_item write_item);
 	@(posedge ip_m_vif.ACLK iff(ip_m_vif.inp_mon_cb.BVALID && ip_m_vif.inp_mon_cb.BREADY));
 	write_item.BREADY = ip_m_vif.inp_mon_cb.BREADY;
@@ -80,7 +76,6 @@ task collect_b(axi_seq_item write_item);
 	write_item.BRESP = ip_m_vif.inp_mon_cb.BRESP;
 	`uvm_info("AXI_B",$sformatf("BREADY=%0b BRESP=%0b BVALID=%0b", write_item.BREADY, ip_m_vif.inp_mon_cb.BRESP, ip_m_vif.inp_mon_cb.BVALID), UVM_NONE)
 endtask
-  
 task collect_ar(axi_seq_item read_item);
 	@(posedge ip_m_vif.ACLK iff (ip_m_vif.inp_mon_cb.ARVALID && ip_m_vif.inp_mon_cb.ARREADY));
 	read_item.ARADDR = ip_m_vif.inp_mon_cb.ARADDR;
@@ -89,7 +84,6 @@ task collect_ar(axi_seq_item read_item);
 	read_item.ARREADY = ip_m_vif.inp_mon_cb.ARREADY;
 	`uvm_info("AXI_AR",$sformatf("ARADDR=%0h ARPROT=%0b ARVALID=%0b ARREADY=%0b", read_item.ARADDR, read_item.ARPROT, read_item.ARVALID, ip_m_vif.inp_mon_cb.ARREADY), UVM_NONE)
 endtask
-
 task collect_r(axi_seq_item read_item);
 	@(posedge ip_m_vif.ACLK iff(ip_m_vif.inp_mon_cb.RVALID && ip_m_vif.inp_mon_cb.RREADY));
 	read_item.RREADY = ip_m_vif.inp_mon_cb.RREADY;

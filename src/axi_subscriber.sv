@@ -10,8 +10,7 @@ covergroup inp_cg;
 AWADDR_cp: coverpoint drv.AWADDR
 {
 	bins aw1 ={[32'h0:32'h24]};
-	 bins aw2 = {[32'h28:32'h30], 'h3C};
-//	 bins aw3 = {[32'h34:32'h3C]};
+	bins aw2 = {[32'h28:32'h30], 'h3C};
 }
 
 AWPROT_cp: coverpoint drv.AWPROT 
@@ -78,8 +77,7 @@ BREADY_cp: coverpoint drv.BREADY
 ARADDR_cp: coverpoint drv.ARADDR
 {
 	bins ar1 ={[32'h0:32'h24]};
-//	 bins ar2 = {[32'h28:32'h30], 32'h3C};
-	 bins ar3 = {[32'h34:32'h3C]};
+	bins ar3 = {[32'h34:32'h3C]};
 }
 
 ARPROT_cp: coverpoint drv.ARPROT 

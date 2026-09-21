@@ -17,10 +17,8 @@ endfunction
 
 function void build_phase(uvm_phase phase);
 	super.build_phase(phase);
-
 	if(!uvm_config_db #(axi_config)::get(this,"","axi_config",m_cfg))
 		`uvm_fatal(get_type_name(),"OP Mon get failed")
-
 	if(!uvm_config_db #(virtual axi_interface.OP_MON)::get(this,"","axi_op_mon_vif",op_m_vif))
 		`uvm_fatal(get_type_name(),"Output Monitor VIF get failed")
 endfunction
@@ -31,7 +29,6 @@ task run_phase(uvm_phase phase);
 		Read_collect();
 	join_none
 endtask
-
 task Write_collect();
 	axi_seq_item write_item;
 	forever begin
@@ -44,7 +41,6 @@ task Write_collect();
 		op_m_port_write.write(write_item);
 	end
 endtask
-
 task Read_collect();
 	axi_seq_item read_item;
 	forever begin
@@ -54,7 +50,6 @@ task Read_collect();
 		op_m_port_read.write(read_item);
 	end
 endtask
-
 task collect_aw(axi_seq_item write_item);
 	@(posedge op_m_vif.ACLK iff(op_m_vif.op_mon_cb.AWVALID && op_m_vif.op_mon_cb.AWREADY));
 	write_item.AWVALID = op_m_vif.op_mon_cb.AWVALID;

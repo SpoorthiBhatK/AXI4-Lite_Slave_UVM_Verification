@@ -27,11 +27,7 @@ bit [`DW-1:0] RDATA;
 bit [1:0] RRESP;
 bit RVALID;
 rand bit RREADY;
-/*
-constraint cns{
-	AWPROT == 3'b000;ARPROT == 3'b000;
-}
-*/
+
 constraint cns
 {
     AWPROT inside {[3'b000:3'b111]};
