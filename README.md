@@ -20,6 +20,3 @@ The testbench verifies AXI4-Lite read and write transactions, protocol handshaki
 - SystemVerilog Assertions
 - UVM Scoreboard-based checking
 
-
-             Expected vs
-                Actual
